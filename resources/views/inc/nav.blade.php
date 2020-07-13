@@ -7,7 +7,7 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item active"><a href="{{ url('/') }}" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="browsejobs.html" class="nav-link">Browse Jobs</a></li>
           {{-- <li class="nav-item"><a href="candidates.html" class="nav-link">Canditates</a></li> --}}
           <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
