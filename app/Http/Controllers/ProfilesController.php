@@ -27,12 +27,13 @@ class ProfilesController extends Controller
         return view('applicants.home');
     }
 
-    public function show($user)
+    public function show(User $user)
     {
-        $user = User::findOrFail($user);
+        return view('applicants.user_details', compact('user'));
+    }
 
-        return view('applicants.user_details');
-
-        //return view('applicants.home');
+    public function edit(User $user)
+    {
+        return view('applicants.user_details', compact('user'));
     }
 }
