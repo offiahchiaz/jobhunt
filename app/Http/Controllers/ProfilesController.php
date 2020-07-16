@@ -24,13 +24,13 @@ class ProfilesController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('applicants.home');
     }
 
     public function show($user)
     {
-        // $user = User::find($user);
+        $user = User::find($user);
 
-        return view('home');
+        return view('applicants.home');
     }
 }
