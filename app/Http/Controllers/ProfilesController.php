@@ -29,8 +29,10 @@ class ProfilesController extends Controller
 
     public function show($user)
     {
-        $user = User::find($user);
+        $user = User::findOrFail($user);
 
-        return view('applicants.home');
+        return view('applicants.user_details');
+
+        //return view('applicants.home');
     }
 }
