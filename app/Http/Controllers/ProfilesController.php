@@ -34,6 +34,6 @@ class ProfilesController extends Controller
 
     public function edit(User $user)
     {
-        return view('applicants.user_details', compact('user'));
+        return view('applicants.profile_form', compact('user'));
     }
 }
