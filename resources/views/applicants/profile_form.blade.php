@@ -20,10 +20,10 @@
 
                 <div class="col-md-8">
                     <div class="card">
-                      <div class="card-header">{{ __('Profile') }}</div>
+                      <div class="card-header">{{ __('Edit Profile') }}</div>
                       <div class="card-body">
 
-                      <form method="POST" action="/profile/{{ $user->id }}" enctype="multipart/form-data">
+                      <form method="POST" action="/profile/{{ $user->username }}" enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
 
@@ -31,6 +31,12 @@
                                 <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('Firstname') }}</label>
 
                                 <div class="col-md-6">
+                                    <select name="title" id="title" class="form-control @error('title') is-invalid @enderror">
+
+                                    </select>
+
+
+
                                     <input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror" 
                                     name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" autofocus>
 
